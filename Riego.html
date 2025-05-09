@@ -8,22 +8,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-  <div class="iluminacion-panel">
-    <h1 class="main-title">Panel de Riego</h1>
+  <main class="iluminacion-panel">
+    <header>
+      <h1 class="main-title">Panel de Riego</h1>
+    </header>
 
-    <!-- Botones generales .-->
-    <div class="botones-generales">
+    <!-- Botones generales -->
+    <section class="botones-generales" aria-label="Controles generales">
       <button class="btn-general">Activar todas las zonas</button>
       <button class="btn-general">Desactivar todas las zonas</button>
-    </div>
+    </section>
 
     <!-- Controles manuales -->
-    <div class="manual-controls">
+    <section class="manual-controls" aria-label="Controles manuales">
+
       <!-- Sección: Jardín delantero -->
-      <section class="zona">
-        <h2>Jardín delantero</h2>
+      <section class="zona" aria-labelledby="jardin-delantero">
+        <h2 id="jardin-delantero">Jardín delantero</h2>
         <div class="luces-grid">
-          <div class="luz-control">
+          <article class="luz-control">
             <p>Riego</p>
             <label class="switch">
               <input type="checkbox" />
@@ -33,15 +36,15 @@
               <label>Iniciar a: <input type="time" /></label>
               <label>Finalizar a: <input type="time" /></label>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
       <!-- Sección: Jardín trasero -->
-      <section class="zona">
-        <h2>Jardín trasero</h2>
+      <section class="zona" aria-labelledby="jardin-trasero">
+        <h2 id="jardin-trasero">Jardín trasero</h2>
         <div class="luces-grid">
-          <div class="luz-control">
+          <article class="luz-control">
             <p>Riego</p>
             <label class="switch">
               <input type="checkbox" />
@@ -51,15 +54,15 @@
               <label>Iniciar a: <input type="time" /></label>
               <label>Finalizar a: <input type="time" /></label>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
       <!-- Sección: Macetas -->
-      <section class="zona">
-        <h2>Macetas y plantas interiores</h2>
+      <section class="zona" aria-labelledby="macetas">
+        <h2 id="macetas">Macetas y plantas interiores</h2>
         <div class="luces-grid">
-          <div class="luz-control">
+          <article class="luz-control">
             <p>Riego</p>
             <label class="switch">
               <input type="checkbox" />
@@ -69,14 +72,14 @@
               <label>Iniciar a: <input type="time" /></label>
               <label>Finalizar a: <input type="time" /></label>
             </div>
-          </div>
+          </article>
         </div>
       </section>
-    </div>
+    </section>
 
     <!-- Pronóstico del clima -->
-    <section class="zona">
-      <h2>Pronóstico del Clima</h2>
+    <section class="zona" aria-labelledby="clima">
+      <h2 id="clima">Pronóstico del Clima</h2>
       <div class="pronostico">
         <p>Aquí se mostrará el pronóstico del clima de las próximas horas.</p>
         <p class="ejemplo">🌧️ Posibilidad de lluvia: 80%</p>
@@ -86,8 +89,8 @@
     </section>
 
     <!-- Humedad del suelo -->
-    <section class="zona">
-      <h2>Nivel de Humedad del Suelo</h2>
+    <section class="zona" aria-labelledby="humedad">
+      <h2 id="humedad">Nivel de Humedad del Suelo</h2>
       <div class="tabla-humedad">
         <table>
           <thead>
@@ -115,9 +118,9 @@
     </section>
 
     <!-- Riego automático -->
-    <section class="zona">
-      <h2>Riego Automático</h2>
-      <div class="luz-control">
+    <section class="zona" aria-labelledby="riego-auto">
+      <h2 id="riego-auto">Riego Automático</h2>
+      <article class="luz-control">
         <p>Activar modo automático</p>
         <label class="switch">
           <input type="checkbox" id="autoSwitch" />
@@ -126,9 +129,9 @@
         <p class="nota">
           Este modo activa el riego según el nivel de humedad del suelo y el pronóstico del clima.
         </p>
-      </div>
+      </article>
     </section>
-  </div>
+  </main>
 
   <!-- Script para desactivar controles manuales si está activado el modo automático -->
   <script>
@@ -147,3 +150,4 @@
   </script>
 </body>
 </html>
+
