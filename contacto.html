@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyHome | Contacto</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body class="body-index">
+  <main class="container">
+    <header>
+      <h1>¿Querés más información?</h1>
+    </header>
+
+    <section class="contacto-seccion">
+    
+      <div class="card contacto-form">
+        <h2 id="hscontacto">Contacto</h2>
+        <form id="contactForm" action="https://formspree.io/f/mwpezbng" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="telefono">Teléfono (Opcional):</label>
+          <input type="tel" id="telefono" name="telefono" />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+          <button class="botonenviar" type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <!-- Mapa con JS-->
+      <div class="card map-container">
+        <h2>Ubicación</h2>
+        <div id="map" style="width: 100%; height: 300px; border-radius: 8px;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script de Google Maps -->
+  <script>
+    function initMap() {
+      const ubicacion = { lat: -38.005478, lng: -57.542610 }; // Coordenadas de Mar del Plata
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 14,
+        center: ubicacion,
+      });
+
+      new google.maps.Marker({
+        position: ubicacion,
+        map: map,
+        title: "Mar del Plata, Buenos Aires",
+      });
+    }
+  </script>
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF0EzHE6qeR4w506gIEkiuc-EjWx9OTns&callback=initMap"
+        async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

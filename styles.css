@@ -1,6 +1,6 @@
 /* Estilos generales */
 .body-index {
-    height: 110vh; /*viewport*/
+    height: 110vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('img/fondo-index.jpg');
@@ -124,8 +124,6 @@ h2 {
     background-color: #128C7E;
 }
 
-
-
 /* Estilo del título principal */
 .main-title {
     font-size: 3.5rem;
@@ -152,32 +150,32 @@ h2 {
 /* Media Queries para dispositivos más pequeños */
 @media (max-width: 1024px) {
     .categories {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .categories {
-        grid-template-columns: 1fr; /* Una columna en móviles */
+        grid-template-columns: 1fr;
     }
 
     h1 {
-        font-size: 2rem; /* Ajuste de tamaño de fuente */
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1rem; /* Ajuste de tamaño de subtítulo */
+        font-size: 1rem;
     }
 
     .social-icons a {
-        font-size: 1.2rem; /* Ajuste de tamaño de iconos sociales */
+        font-size: 1.2rem;
     }
 }
 
 /* PANEL ILUMINACIÓN */
 .iluminacion-panel {
     min-height: 100vh;
-    background-color: #121212; /* Color sólido */
+    background-color: #121212;
     color: white;
     display: flex;
     flex-direction: column;
@@ -329,3 +327,71 @@ input:checked + .slider:before {
     color: #ccc;
 }
 
+
+/* === Sección de contacto === */
+.contacto-seccion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #f39c12;
+}
+
+/* Formulario de contacto */
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    outline: 2px solid #25D366;
+    background: #fff;
+    color: #000;
+}
+
+.botonenviar {
+    background-color: #25D366;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.botonenviar:hover {
+    background-color: #128C7E;
+}
+
+/* Mapa */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
