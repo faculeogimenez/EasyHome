@@ -1,7 +1,11 @@
-/* === ESTILOS GENERALES (se mantienen, pero se combinan con clases Bootstrap) === */
+/* === los estilos generales se mantienen pero se combino con las clases de bootstrap.
+EL OBJETIVO PRINCIPAL AL YA POSEER ESTILOS ARMDOS, FUE MANTENER LO MAS POSIBLE
+LA BASE DEL SITIO COMO SE TRAIA, E INCORPORAR BOOTSTRAP PRINCIPALMENTE PARA
+VOLVERLO MAS RESPONSIVO, Y PARA EL  USO DE ALGUNOS BOTONES
+=== */
 .body-index {
     /* Fondo principal: seguimos usando imagen de fondo para el index */
-    height: 100vh; /* Con Bootstrap usamos height-100 en divs si queremos */
+    height: 100vh; 
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('img/fondo-index.jpg');
