@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EasyHome | Riego</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
 </head>
 <body>
   <main class="iluminacion-panel">
@@ -13,141 +13,97 @@
       <h1 class="main-title">Panel de Riego</h1>
     </header>
 
+    <div class="mt-2">
+      <!-- Botón de inicio con Bootstrap -->
+      <a href="index.html" class="btn btn-primary">Inicio</a>
+    </div>
+
     <!-- Botones generales -->
-    <section class="botones-generales" aria-label="Controles generales">
-      <button class="btn-general">Activar todas las zonas</button>
-      <button class="btn-general">Desactivar todas las zonas</button>
+    <section class="botones-generales p-3" aria-label="Controles generales">
+      <button id="activar-todas" class="btn btn-success me-2">Activar todas las zonas</button>
+      <button id="desactivar-todas" class="btn btn-danger">Desactivar todas las zonas</button>
     </section>
 
     <!-- Controles manuales -->
-    <section class="manual-controls" aria-label="Controles manuales">
-
+    <section class="manual-controls p-3" aria-label="Controles manuales">
       <!-- Sección: Jardín delantero -->
-      <section class="zona" aria-labelledby="jardin-delantero">
+      <section class="zona mb-4" aria-labelledby="jardin-delantero">
         <h2 id="jardin-delantero">Jardín delantero</h2>
         <div class="luces-grid">
           <article class="luz-control">
             <p>Riego</p>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" class="zona-checkbox" />
               <span class="slider"></span>
             </label>
             <div class="programacion">
-              <label>Iniciar a: <input type="time" /></label>
-              <label>Finalizar a: <input type="time" /></label>
+              <label>Iniciar a: <input type="time" class="form-control" /></label>
+              <label>Finalizar a: <input type="time" class="form-control" /></label>
             </div>
           </article>
         </div>
       </section>
 
       <!-- Sección: Jardín trasero -->
-      <section class="zona" aria-labelledby="jardin-trasero">
+      <section class="zona mb-4" aria-labelledby="jardin-trasero">
         <h2 id="jardin-trasero">Jardín trasero</h2>
         <div class="luces-grid">
           <article class="luz-control">
             <p>Riego</p>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" class="zona-checkbox" />
               <span class="slider"></span>
             </label>
             <div class="programacion">
-              <label>Iniciar a: <input type="time" /></label>
-              <label>Finalizar a: <input type="time" /></label>
+              <label>Iniciar a: <input type="time" class="form-control" /></label>
+              <label>Finalizar a: <input type="time" class="form-control" /></label>
             </div>
           </article>
         </div>
       </section>
 
       <!-- Sección: Macetas -->
-      <section class="zona" aria-labelledby="macetas">
+      <section class="zona mb-4" aria-labelledby="macetas">
         <h2 id="macetas">Macetas y plantas interiores</h2>
         <div class="luces-grid">
           <article class="luz-control">
             <p>Riego</p>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" class="zona-checkbox" />
               <span class="slider"></span>
             </label>
             <div class="programacion">
-              <label>Iniciar a: <input type="time" /></label>
-              <label>Finalizar a: <input type="time" /></label>
+              <label>Iniciar a: <input type="time" class="form-control" /></label>
+              <label>Finalizar a: <input type="time" class="form-control" /></label>
             </div>
           </article>
         </div>
       </section>
     </section>
-
-    <!-- Pronóstico del clima -->
-    <section class="zona" aria-labelledby="clima">
-      <h2 id="clima">Pronóstico del Clima</h2>
-      <div class="pronostico">
-        <p>Aquí se mostrará el pronóstico del clima de las próximas horas.</p>
-        <p class="ejemplo">🌧️ Posibilidad de lluvia: 80%</p>
-        <p class="ejemplo">💨 Viento: 15 km/h</p>
-        <p class="ejemplo">☀️ Temperatura: 22°C</p>
-      </div>
-    </section>
-
-    <!-- Humedad del suelo -->
-    <section class="zona" aria-labelledby="humedad">
-      <h2 id="humedad">Nivel de Humedad del Suelo</h2>
-      <div class="tabla-humedad">
-        <table>
-          <thead>
-            <tr>
-              <th>Zona</th>
-              <th>Humedad (%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Jardín delantero</td>
-              <td>35%</td>
-            </tr>
-            <tr>
-              <td>Jardín trasero</td>
-              <td>42%</td>
-            </tr>
-            <tr>
-              <td>Macetas</td>
-              <td>30%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Riego automático -->
-    <section class="zona" aria-labelledby="riego-auto">
-      <h2 id="riego-auto">Riego Automático</h2>
-      <article class="luz-control">
-        <p>Activar modo automático</p>
-        <label class="switch">
-          <input type="checkbox" id="autoSwitch" />
-          <span class="slider"></span>
-        </label>
-        <p class="nota">
-          Este modo activa el riego según el nivel de humedad del suelo y el pronóstico del clima.
-        </p>
-      </article>
-    </section>
   </main>
 
-  <!-- Script para desactivar controles manuales si está activado el modo automático -->
+  <!-- Script para activar/desactivar todas las zonas -->
   <script>
-    const autoSwitch = document.getElementById("autoSwitch");
-    const manualControls = document.querySelector(".manual-controls");
+    // Seleccionar los botones y los checkbox
+    const activarTodasBtn = document.getElementById("activar-todas");
+    const desactivarTodasBtn = document.getElementById("desactivar-todas");
+    const checkboxes = document.querySelectorAll(".zona-checkbox");
 
-    autoSwitch.addEventListener("change", () => {
-      if (autoSwitch.checked) {
-        manualControls.style.opacity = "0.5";
-        manualControls.style.pointerEvents = "none";
-      } else {
-        manualControls.style.opacity = "1";
-        manualControls.style.pointerEvents = "auto";
-      }
+    // Función para activar todas las zonas
+    activarTodasBtn.addEventListener("click", () => {
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+    });
+
+    // Función para desactivar todas las zonas
+    desactivarTodasBtn.addEventListener("click", () => {
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+      });
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
