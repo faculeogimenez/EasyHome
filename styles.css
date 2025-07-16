@@ -24,7 +24,7 @@ VOLVERLO MAS RESPONSIVO, Y PARA EL  USO DE ALGUNOS BOTONES
 h1, .main-title {
     font-size: 3rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    margin-bottom: 1rem; /* Ajustado: Bootstrap maneja mb-4 etc. pero mantenemos fallback */
+    margin-bottom: 1rem; 
 }
 
 .main-title {
@@ -100,7 +100,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* === REDES SOCIALES (mantendremos fijas, se podrían migrar a navbar bottom de Bootstrap) === */
+/* === REDES SOCIALES (mantendremos fijas,*/
 .social-bar {
     position: fixed;
     bottom: 20px;
@@ -123,8 +123,8 @@ h2 {
     transform: scale(1.2);
 }
 
-/* === BOTÓN FLOTANTE DE WHATSAPP === */
-/* Puede mantenerse, o reemplazarse por btn btn-success position-fixed bottom-0 end-0 en HTML */
+/* === boton de whatsapp === */
+
 .whatsapp-button {
     position: fixed;
     bottom: 30px;
@@ -151,7 +151,7 @@ h2 {
 }
 
 /* === PANEL ILUMINACIÓN & RIEGO === */
-/* Fondo oscuro + padding: Bootstrap podría usar bg-dark, p-4, text-white en HTML */
+
 .iluminacion-panel {
     min-height: 100vh;
     background-color: #121212;
@@ -199,7 +199,7 @@ h2 {
     font-weight: bold;
 }
 
-/* === SWITCH DESLIZANTE (se mantiene personalizado) === */
+/* === SWITCH DESLizable=== */
 .switch {
     position: relative;
     display: inline-block;
@@ -254,7 +254,7 @@ input:checked + .slider:before {
     font-size: 0.9rem;
 }
 
-/* === BOTONES GENERALES (mantendremos, pero en HTML podemos usar btn btn-success / btn-danger) === */
+/* === BOTONES GENERALES  === */
 .botones-generales {
     display: flex;
     gap: 20px;
@@ -287,7 +287,8 @@ input:checked + .slider:before {
     color: #f39c12;
 }
 
-/* Formulario con estilos base, podemos añadir en HTML form-control a inputs */
+/* Formulario con estilos base, podemos añadir en HTML form-control a inputs 
+    la comunicacion se mantiene con formspree*/
 .contacto-form form {
     display: flex;
     flex-direction: column;
