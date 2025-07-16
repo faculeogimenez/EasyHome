@@ -1,6 +1,7 @@
-/* Estilos generales */
+/* === ESTILOS GENERALES (se mantienen, pero se combinan con clases Bootstrap) === */
 .body-index {
-    height: 110vh;
+    /* Fondo principal: seguimos usando imagen de fondo para el index */
+    height: 100vh; /* Con Bootstrap usamos height-100 en divs si queremos */
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('img/fondo-index.jpg');
@@ -15,14 +16,44 @@
     text-align: center;
 }
 
-/* Estilo del título principal */
-h1 {
+/* Título principal personalizado */
+h1, .main-title {
     font-size: 3rem;
-    margin-bottom: ;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem; /* Ajustado: Bootstrap maneja mb-4 etc. pero mantenemos fallback */
 }
 
-/* Contenedor principal */
+.main-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fcf6f6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4rem;
+}
+
+.main-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: #f39c12;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Subtítulos */
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #d1d1d1;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+/* Bootstrap ya tiene container, container-fluid, etc. 
+   pero mantenemos algunos ajustes visuales */
 .container {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -32,14 +63,9 @@ h1 {
     margin: 20px auto;
 }
 
-/* Subtítulo */
-h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #d1d1d1;
-}
-
-/* Categorías */
+/* === CATEGORÍAS === */
+/* Con Bootstrap usaríamos grid system: row y col,
+   pero mantenemos este grid + añadimos clases Bootstrap en HTML */
 .categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -70,12 +96,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.category p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-/* Barra de redes sociales en la parte inferior */
+/* === REDES SOCIALES (mantendremos fijas, se podrían migrar a navbar bottom de Bootstrap) === */
 .social-bar {
     position: fixed;
     bottom: 20px;
@@ -98,7 +119,8 @@ h2 {
     transform: scale(1.2);
 }
 
-/* Estilos para el botón flotante de WhatsApp */
+/* === BOTÓN FLOTANTE DE WHATSAPP === */
+/* Puede mantenerse, o reemplazarse por btn btn-success position-fixed bottom-0 end-0 en HTML */
 .whatsapp-button {
     position: fixed;
     bottom: 30px;
@@ -124,55 +146,8 @@ h2 {
     background-color: #128C7E;
 }
 
-/* Estilo del título principal */
-.main-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #fcf6f6; 
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 4rem;
-    position: relative;
-    display: inline-block;
-}
-
-.main-title::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background-color: #f39c12; 
-    display: block;
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
-
-/* Media Queries para dispositivos más pequeños */
-@media (max-width: 1024px) {
-    .categories {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .categories {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
-
-    .social-icons a {
-        font-size: 1.2rem;
-    }
-}
-
-/* PANEL ILUMINACIÓN */
+/* === PANEL ILUMINACIÓN & RIEGO === */
+/* Fondo oscuro + padding: Bootstrap podría usar bg-dark, p-4, text-white en HTML */
 .iluminacion-panel {
     min-height: 100vh;
     background-color: #121212;
@@ -183,6 +158,7 @@ h2 {
     padding: 40px 20px;
 }
 
+/* Caja para cada zona */
 .zona {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -192,18 +168,21 @@ h2 {
     max-width: 1000px;
 }
 
+/* Título de la zona */
 .zona h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #f39c12;
 }
 
+/* Grilla de luces: reemplazable con row y col-md en HTML */
 .luces-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
+/* Cada control individual */
 .luz-control {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -216,7 +195,7 @@ h2 {
     font-weight: bold;
 }
 
-/* Switch deslizante */
+/* === SWITCH DESLIZANTE (se mantiene personalizado) === */
 .switch {
     position: relative;
     display: inline-block;
@@ -259,7 +238,7 @@ input:checked + .slider:before {
     transform: translateX(24px);
 }
 
-/* Programación horaria */
+/* === PROGRAMACIÓN HORARIA === */
 .programacion {
     margin-top: 15px;
     text-align: center;
@@ -271,6 +250,7 @@ input:checked + .slider:before {
     font-size: 0.9rem;
 }
 
+/* === BOTONES GENERALES (mantendremos, pero en HTML podemos usar btn btn-success / btn-danger) === */
 .botones-generales {
     display: flex;
     gap: 20px;
@@ -279,56 +259,8 @@ input:checked + .slider:before {
     flex-wrap: wrap;
 }
 
-.btn-general {
-    background-color: #25D366;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn-general:hover {
-    background-color: #128C7E;
-}
-
-.pronostico {
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.pronostico .ejemplo {
-    margin: 6px 0;
-}
-
-.tabla-humedad table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.tabla-humedad th, .tabla-humedad td {
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 10px;
-    text-align: center;
-}
-
-.tabla-humedad th {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.nota {
-    font-size: 0.9rem;
-    margin-top: 10px;
-    color: #ccc;
-}
-
-
-/* === Sección de contacto === */
+/* === SECCIÓN CONTACTO === */
+/* Reemplazamos grid por Bootstrap row + col en HTML, pero mantenemos estilos visuales */
 .contacto-seccion {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -351,7 +283,7 @@ input:checked + .slider:before {
     color: #f39c12;
 }
 
-/* Formulario de contacto */
+/* Formulario con estilos base, podemos añadir en HTML form-control a inputs */
 .contacto-form form {
     display: flex;
     flex-direction: column;
@@ -389,9 +321,23 @@ input:checked + .slider:before {
     background-color: #128C7E;
 }
 
-/* Mapa */
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
+/* === MEDIA QUERIES (pueden reducirse usando clases responsive de Bootstrap) === */
+@media (max-width: 1024px) {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
 }

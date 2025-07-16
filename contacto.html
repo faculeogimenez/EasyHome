@@ -4,45 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EasyHome | Contacto</title>
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="body-index">
-  <main class="container">
-    <header>
-      <h1>¿Querés más información?</h1>
+  <main class="container py-4">
+    <header class="text-center mb-4">
+      <h1 class="main-title">¿Querés más información?</h1>
+      <p class="text-light">Completa el formulario o consulta nuestra ubicación</p>
     </header>
 
-    <section class="contacto-seccion">
-    
-      <div class="card contacto-form">
-        <h2 id="hscontacto">Contacto</h2>
-        <form id="contactForm" action="https://formspree.io/f/mwpezbng" method="POST">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
-
-          <label for="apellido">Apellido:</label>
-          <input type="text" id="apellido" name="apellido" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="telefono">Teléfono (Opcional):</label>
-          <input type="tel" id="telefono" name="telefono" />
-
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-          <button class="botonenviar" type="submit">Enviar</button>
-        </form>
+    <div class="row g-4">
+      <!-- Formulario -->
+      <div class="col-12 col-md-6">
+        <div class="card contacto-form p-4">
+          <h2 id="hscontacto" class="mb-3">Contacto</h2>
+          <form id="contactForm" action="https://formspree.io/f/mwpezbng" method="POST">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono (Opcional):</label>
+              <input type="tel" id="telefono" name="telefono" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required></textarea>
+            </div>
+            <button class="btn btn-success w-100" type="submit">Enviar</button>
+          </form>
+        </div>
       </div>
 
-      <!-- Mapa con JS-->
-      <div class="card map-container">
-        <h2>Ubicación</h2>
-        <div id="map" style="width: 100%; height: 300px; border-radius: 8px;"></div>
+      <!-- Mapa -->
+      <div class="col-12 col-md-6">
+        <div class="card p-3">
+          <h2 class="mb-3">Ubicación</h2>
+          <div id="map" style="width: 100%; height: 300px; border-radius: 8px;"></div>
+        </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <!-- Script de Google Maps -->
@@ -61,10 +75,12 @@
       });
     }
   </script>
-
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF0EzHE6qeR4w506gIEkiuc-EjWx9OTns&callback=initMap"
-        async defer></script>
-    <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF0EzHE6qeR4w506gIEkiuc-EjWx9OTns&callback=initMap" async defer></script>
+  <!-- Tu JS adicional si lo tienes -->
+  <script src="script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 

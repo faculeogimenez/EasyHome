@@ -1,90 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyHome | Tu hogar inteligente </title>
-    <meta name="description" content="Domotica">
-    <meta name="keywords" content="Domotica">
-    <meta name="author" content="EasyHome Domotica">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyHome | Tu hogar inteligente</title>
+  <meta name="description" content="Domotica">
+  <meta name="keywords" content="Domotica">
+  <meta name="author" content="EasyHome Domotica">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="body-index">
-    <main class="container">
-        <header>
-            <h1 class="main-title"> Easy Home Domotica</h1>
-            <h2>Elige una categoría</h2>
-        </header>
+  <main class="container py-4">
+    <header class="text-center mb-4">
+      <h1 class="main-title">Easy Home Domotica</h1>
+      <h2 class="text-light">Elige una categoría</h2>
+    </header>
 
-        <section class="categories">
-            <a href="Iluminacion.html" class="category" aria-label="Iluminacion">
-                <i class="fas fa-lightbulb"></i>
-                <p>Iluminacion</p>
-            </a>
-            <a href="Accesos.html" class="category" aria-label="Accesos">
-                <i class="fas fa-key"></i>
-                <p>Accesos</p>
-            </a>
-            <a href="Climatizacion.html" class="category" aria-label="Climatizacion">
-                <i class="fas fa-wind"></i>
-                <p>Climatizacion.</p>
-            </a>
-            <a href="Riego.html" class="category" aria-label="Riego y Jardin">
-                <i class="fas fa-tint"></i>
-                <p>Riego y Jardin</p>
-            </a>
-            <a href="Multimedia.html" class="category" aria-label="Multimedia">
-                <i class="fas fa-play-circle"></i>
-                <p>Multimedia</p>
-            </a>
-            <a href="Cocina.html" class="category" aria-label="Cocina">
-                <i class="fas fa-blender"></i>
-                <p>Cocina</p>
-            </a>
-            <a href="Persianas.html" class="category" aria-label="Persianas">
-                <i class="fas fa-align-justify"></i>
-                <p>Persianas</p>
-            </a>
-            <a href="Camaras.html" class="category" aria-label="Sistema de vigilancia">
-                <i class="fas fa-video"></i>
-                <p>Sist. Vigilancia</p>
-            </a>
-            <a href="Noticias.html" class="category" aria-label="Noticias e Interes">
-                <i class="fas fa-newspaper"></i>
-                <p>Noticias</p>
-            </a>
-        </section>
-
-        <footer>
-            <!-- Barra de redes sociales en la -parte inferior. -->
-            <div class="social-bar">
-                <a href="contacto.html" 
-                   target="_blank" rel="noopener noreferrer" aria-label="Escribinos">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="www.instagram.com/easyhomearg/"
-                   target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/share/19xpPQBGgs/" 
-                   target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-            </div>
-        </footer>
-
-        <!-- Botón flotante de WhatsApp -->
-        <a href="https://wa.me/?text=Hola,%20quiero%20más%20información." 
-           class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i> Contáctanos
+    <!-- Categorías con Bootstrap grid -->
+    <section class="row g-3">
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Iluminacion.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-lightbulb"></i>
+          <p>Iluminación</p>
         </a>
-    </main>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Accesos.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-key"></i>
+          <p>Accesos</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Climatizacion.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-wind"></i>
+          <p>Climatización</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Riego.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-tint"></i>
+          <p>Riego y Jardín</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Multimedia.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-play-circle"></i>
+          <p>Multimedia</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Cocina.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-blender"></i>
+          <p>Cocina</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Persianas.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-align-justify"></i>
+          <p>Persianas</p>
+        </a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="Camaras.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-video"></i>
+          <p>Sist. Vigilancia</p>
+        </a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 mx-auto">
+        <a href="Noticias.html" class="category d-flex flex-column align-items-center text-decoration-none">
+          <i class="fas fa-newspaper"></i>
+          <p>Noticias</p>
+        </a>
+      </div>
+    </section>
+
+    <footer class="mt-4">
+      <div class="social-bar d-flex justify-content-center gap-3">
+        <a href="contacto.html" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.instagram.com/easyhomearg/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/share/19xpPQBGgs/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/?text=Hola,%20quiero%20más%20información." 
+       class="whatsapp-button d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-whatsapp me-2"></i> Contáctanos
+    </a>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
- 
+
+
 
 
 
