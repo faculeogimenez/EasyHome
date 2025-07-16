@@ -3,8 +3,8 @@ EL OBJETIVO PRINCIPAL AL YA POSEER ESTILOS ARMDOS, FUE MANTENER LO MAS POSIBLE
 LA BASE DEL SITIO COMO SE TRAIA, E INCORPORAR BOOTSTRAP PRINCIPALMENTE PARA
 VOLVERLO MAS RESPONSIVO, Y PARA EL  USO DE ALGUNOS BOTONES
 === */
+/* === ESTILOS BASE === */
 .body-index {
-    /* Fondo principal: seguimos usando imagen de fondo para el index */
     height: 100vh; 
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,7 +20,6 @@ VOLVERLO MAS RESPONSIVO, Y PARA EL  USO DE ALGUNOS BOTONES
     text-align: center;
 }
 
-/* Título principal personalizado */
 h1, .main-title {
     font-size: 3rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
@@ -48,16 +47,12 @@ h1, .main-title {
     border-radius: 2px;
 }
 
-/* Subtítulos */
 h2 {
-    font-size: 2 rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #d1d1d1;
 }
 
-/* === CONTENEDOR PRINCIPAL === */
-/* Bootstrap ya tiene container, container-fluid, etc. 
-   pero mantenemos algunos ajustes visuales */
 .container {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -68,8 +63,6 @@ h2 {
 }
 
 /* === CATEGORÍAS === */
-/* Con Bootstrap usaríamos grid system: row y col,
-   pero mantenemos este grid + añadimos clases Bootstrap en HTML */
 .categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -100,7 +93,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* === REDES SOCIALES (mantendremos fijas,*/
+/* === REDES SOCIALES === */
 .social-bar {
     position: fixed;
     bottom: 20px;
@@ -122,8 +115,6 @@ h2 {
 .social-bar a:hover {
     transform: scale(1.2);
 }
-
-/* === boton de whatsapp === */
 
 .whatsapp-button {
     position: fixed;
@@ -151,7 +142,6 @@ h2 {
 }
 
 /* === PANEL ILUMINACIÓN & RIEGO === */
-
 .iluminacion-panel {
     min-height: 100vh;
     background-color: #121212;
@@ -162,7 +152,6 @@ h2 {
     padding: 40px 20px;
 }
 
-/* Caja para cada zona */
 .zona {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -172,21 +161,18 @@ h2 {
     max-width: 1000px;
 }
 
-/* Título de la zona */
 .zona h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #f39c12;
 }
 
-/* Grilla de luces: reemplazable con row y col-md en HTML */
 .luces-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-/* Cada control individual */
 .luz-control {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -199,7 +185,6 @@ h2 {
     font-weight: bold;
 }
 
-/* === SWITCH DESLizable=== */
 .switch {
     position: relative;
     display: inline-block;
@@ -242,7 +227,6 @@ input:checked + .slider:before {
     transform: translateX(24px);
 }
 
-/* === PROGRAMACIÓN HORARIA === */
 .programacion {
     margin-top: 15px;
     text-align: center;
@@ -254,7 +238,6 @@ input:checked + .slider:before {
     font-size: 0.9rem;
 }
 
-/* === BOTONES GENERALES  === */
 .botones-generales {
     display: flex;
     gap: 20px;
@@ -263,8 +246,7 @@ input:checked + .slider:before {
     flex-wrap: wrap;
 }
 
-/* === SECCIÓN CONTACTO === */
-/* Reemplazamos grid por Bootstrap row + col en HTML, pero mantenemos estilos visuales */
+/* === CONTACTO === */
 .contacto-seccion {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -287,8 +269,6 @@ input:checked + .slider:before {
     color: #f39c12;
 }
 
-/* Formulario con estilos base, podemos añadir en HTML form-control a inputs 
-    la comunicacion se mantiene con formspree*/
 .contacto-form form {
     display: flex;
     flex-direction: column;
@@ -326,7 +306,7 @@ input:checked + .slider:before {
     background-color: #128C7E;
 }
 
-/* === MEDIA QUERIES (pueden reducirse usando clases responsive de Bootstrap) === */
+/* === MEDIA QUERIES === */
 @media (max-width: 1024px) {
     .categories {
         grid-template-columns: repeat(2, 1fr);
@@ -345,4 +325,48 @@ input:checked + .slider:before {
     h2 {
         font-size: 1rem;
     }
+}
+
+/* === NUEVO BLOQUE: PANEL CLIMATIZACIÓN === */
+.clima-control {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.clima-control label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.clima-control input[type="number"],
+.clima-control select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.clima-control input:focus,
+.clima-control select:focus {
+    outline: 2px solid #25D366;
+}
+
+.clima-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.clima-info p {
+    margin: 0;
+    font-size: 1rem;
 }
