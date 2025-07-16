@@ -1,11 +1,67 @@
+<!-- Panel de Multimedia -->
+<!-- multimedia.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyHome | Multimedia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <main class="iluminacion-panel container py-4">
+    <header class="text-center mb-4">
+      <h1 class="main-title">Panel de Multimedia</h1>
+    </header>
+
+    <div class="mb-3 text-center">
+      <a href="index.html" class="btn btn-primary">Inicio</a>
+    </div>
+
+    <section class="zona mb-4 text-center">
+      <h2>Reproductor de Música</h2>
+      <div class="luz-control">
+        <p>Volumen</p>
+        <input type="range" min="0" max="100" value="50" class="form-range" id="volumenMusica">
+        <span id="volumenMusicaValor">50%</span>
+      </div>
+    </section>
+
+    <section class="zona mb-4 text-center">
+      <h2>Televisor</h2>
+      <div class="luz-control">
+        <p>Encendido</p>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="zona mb-4 text-center">
+      <h2>Ambiente</h2>
+      <div class="luz-control">
+        <p>Luz ambiente</p>
+        <input type="range" min="0" max="100" value="70" class="form-range" id="luzAmbiente">
+        <span id="luzAmbienteValor">70%</span>
+      </div>
+    </section>
+
+    <script>
+      const volumen = document.getElementById("volumenMusica");
+      const volumenValor = document.getElementById("volumenMusicaValor");
+      volumen.addEventListener("input", () => {
+        volumenValor.textContent = `${volumen.value}%`;
+      });
+
+      const luz = document.getElementById("luzAmbiente");
+      const luzValor = document.getElementById("luzAmbienteValor");
+      luz.addEventListener("input", () => {
+        luzValor.textContent = `${luz.value}%`;
+      });
+    </script>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

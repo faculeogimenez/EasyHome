@@ -4,6 +4,7 @@ LA BASE DEL SITIO COMO SE TRAIA, E INCORPORAR BOOTSTRAP PRINCIPALMENTE PARA
 VOLVERLO MAS RESPONSIVO, Y PARA EL  USO DE ALGUNOS BOTONES
 === */
 /* === ESTILOS BASE === */
+/* === ESTILOS GENERALES === */
 .body-index {
     height: 100vh; 
     margin: 0;
@@ -62,7 +63,6 @@ h2 {
     margin: 20px auto;
 }
 
-/* === CATEGORÍAS === */
 .categories {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -93,7 +93,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* === REDES SOCIALES === */
 .social-bar {
     position: fixed;
     bottom: 20px;
@@ -141,7 +140,6 @@ h2 {
     background-color: #128C7E;
 }
 
-/* === PANEL ILUMINACIÓN & RIEGO === */
 .iluminacion-panel {
     min-height: 100vh;
     background-color: #121212;
@@ -246,67 +244,51 @@ input:checked + .slider:before {
     flex-wrap: wrap;
 }
 
-/* === CONTACTO === */
-.contacto-seccion {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+.nota {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.pronostico {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pronostico .ejemplo {
+    margin: 6px 0;
+}
+
+.tabla-humedad table {
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+.tabla-humedad th, .tabla-humedad td {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px;
+    text-align: center;
 }
 
-.card h2 {
-    margin-bottom: 15px;
+.tabla-humedad th {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.form-range {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.temp-display {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
     color: #f39c12;
 }
 
-.contacto-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contacto-form input,
-.contacto-form textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contacto-form input:focus,
-.contacto-form textarea:focus {
-    outline: 2px solid #25D366;
-    background: #fff;
-    color: #000;
-}
-
-.botonenviar {
-    background-color: #25D366;
-    color: white;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.botonenviar:hover {
-    background-color: #128C7E;
-}
-
-/* === MEDIA QUERIES === */
 @media (max-width: 1024px) {
     .categories {
         grid-template-columns: repeat(2, 1fr);
@@ -325,48 +307,4 @@ input:checked + .slider:before {
     h2 {
         font-size: 1rem;
     }
-}
-
-/* === NUEVO BLOQUE: PANEL CLIMATIZACIÓN === */
-.clima-control {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.clima-control label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.clima-control input[type="number"],
-.clima-control select {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-color: #f0f0f0;
-    color: #000;
-}
-
-.clima-control input:focus,
-.clima-control select:focus {
-    outline: 2px solid #25D366;
-}
-
-.clima-info {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.clima-info p {
-    margin: 0;
-    font-size: 1rem;
 }
